@@ -58,5 +58,6 @@ fun main() {
     // Imprimimos los domicilios unicos
     println("Domicilios unicos: ")
     repositorio.domicilios().forEach { println(it) }
+    repositorio.domicilios().forEach { println(it) }
 
 }

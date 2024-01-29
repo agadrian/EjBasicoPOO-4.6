@@ -10,10 +10,14 @@ class RepositorioCompras(){
     }
 
     fun domicilios(): Set<String>{
-        val domiciliosUnicos = mutableSetOf<String>()
+
+        return listaCompras.map {it.cliente.domicilio.dirCompleta()}.toSet() // <-- Lo mismo que abajo de una mejor forma
+
+
+        /*val domiciliosUnicos = mutableSetOf<String>()
         for (compra in listaCompras){
             domiciliosUnicos.add(compra.cliente.domicilio.dirCompleta())
         }
-        return domiciliosUnicos
+        return domiciliosUnicos*/
     }
 }
